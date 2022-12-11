@@ -39,6 +39,7 @@
   ```
 
 ### Install private container registry using digital ocean spaces as storage
+
 - create 2 hostname DNS CNAME records for registry to point to your loadbalancer domain: 
     - registry -> lb.example.com
     - www.registry -> lb.example.com
@@ -47,7 +48,10 @@
 - set `s3.region`, `s3.regionEndpoint` & `s3.bucket` in `docker-registry-values.yml`
 - create access & secret key for bucket
 - set `secrets.s3.accessKey` & `secrets.s3.secretKey` in `docker-registry-values.yml`
-- create registry username & password using: `docker run --rm -ti xmartlabs/htpasswd myuser1 password1 >> htpasswd_file`
+- create registry username & password using: 
+  ```
+  docker run --rm -ti xmartlabs/htpasswd myuser1 password1 >> htpasswd_file
+  ```
 - replace `username:password` under `secrets.htpasswd` with contents of `htpasswd_file` in `docker-registry-values.yml`
 - create container registry:
   ```
