@@ -6,7 +6,7 @@
 - Kubernetes cluster in digitalocean
 
 ### Install nginx ingress load balancer
-- add loadbalancer hostname: lb.example.com -> loadbalancer ip
+- add loadbalancer hostname DNS A Record: lb.example.com -> loadbalancer ip
 - set actual hostname in `nginx-ingress-values.yml`
 - install nginx ingress controller:
 
@@ -32,7 +32,7 @@ kubectl apply -f cert-issuer.yml
 ```
 
 ### Install private container registry using digital ocean spaces as storage
-- create hostname dns entry for registry: registry.example.com -> loadbalancer ip
+- create hostname DNS CNAME entry for registry: registry.example.com -> lb.example.com
 - set actual registry hostname in `docker-registry-values.yml`
 - create spaces bucket in digital ocean
 - set `s3.region`, `s3.regionEndpoint` & `s3.bucket` in `docker-registry-values.yml`
@@ -55,7 +55,7 @@ kubectl create secret docker-registry regcred --docker-server=registry.example.c
 
 ### Install argocd for continuous deployment
 
-- create hostname dns entry for argocd: argocd.example.com -> loadbalancer ip
+- create hostname DNS CNAME entry for argocd: argocd.example.com -> lb.example.com
 - set actual registry hostname in `argocd-ingress-http.yml`
 - install argocd:
 ```
