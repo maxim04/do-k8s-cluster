@@ -10,3 +10,10 @@ controller:
       service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: "true"
       service.beta.kubernetes.io/do-loadbalancer-tls-passthrough: "true"
       service.beta.kubernetes.io/do-loadbalancer-hostname: "lb.example.com"
+  config:
+    use-proxy-protocol: "true"
+    keep-alive-requests: "10000"
+    upstream-keepalive-requests: "1000"
+    worker-processes: "auto"
+    max-worker-connections: "65535"
+    use-gzip: "true"

@@ -20,7 +20,7 @@ secrets:
     username:password
   s3:
     accessKey: ""
-    accessKey: ""
+    secretKey: ""
 
 s3:
   region: reg1
