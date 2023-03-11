@@ -27,3 +27,6 @@ s3:
   regionEndpoint: reg1.digitaloceanspaces.com
   secure: true
   bucket: registry-space
+  
+image:
+  tag: 2.7.1
