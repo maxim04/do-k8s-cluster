@@ -23,10 +23,10 @@ secrets:
     secretKey: ""
 
 s3:
-  region: reg1
-  regionEndpoint: reg1.digitaloceanspaces.com
+  region: reg-region
+  regionEndpoint: reg-region.digitaloceanspaces.com
   secure: true
-  bucket: registry-space
+  bucket: bucket-name
   
 image:
   tag: 2.7.1
