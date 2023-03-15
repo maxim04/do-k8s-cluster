@@ -1,6 +1,9 @@
 # Digitalocean kubernetes cluster setup
 
 ## Steps
+Get $200 in credits
+
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=24070b3efa68&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
 ### Pre-reqs
 - Custom domain in order to add subdomains
 - Kubernetes cluster in digitalocean
